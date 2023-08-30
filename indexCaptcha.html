@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+
+        .geral {
+            padding-top: 0;
+            background-color: #017b56;
+        }
+
+    </style>
+
+</head>
+<body class="geral">
+<!--<div style='height: 20px;'></div>-->
+<form class="center" action="?" method="POST">
+    <div class="g-recaptcha"
+         data-sitekey="6LeD0EgjAAAAAMKtIDuImDQPUiDGAAnllRQihk1w"
+         data-callback="captchaCallback"></div>
+
+</form>
+<script>
+      function captchaCallback(response){
+        //console.log(response);
+        if(typeof Captcha!=="undefined"){
+          Captcha.postMessage(response);
+        }
+      }
+
+</script>
+
+</body>
+</html>
